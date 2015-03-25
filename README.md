@@ -31,3 +31,15 @@ If you wish to use a different url, use the following
 
 -------
     rake which_university[http://otherurl.com]
+
+
+Notes
+======
+The application uses Capybara with Selenium WebDriver to interact with the browser
+As Selenium doesn't provide a way to keep the browser alive after the execution of the Thread
+a workaround is provided by monkey patching the method Driver#quit.
+An usage of the refinement would have been interesting but the keyword using applies the
+refinement only withing the code block in which is defined. As the Driver#quit method is called by Capybara
+the general monkey patching strategy has been preferred.
+
+All the behavioural test use a mock server to stub the google.co.uk page
