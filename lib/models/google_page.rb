@@ -1,6 +1,6 @@
 Capybara.default_driver = :selenium
 
-#MonkeyPatching to let the browser open
+#MonkeyPatching to leave the browser open
 Capybara::Selenium::Driver.class_eval do
     def quit;end
 end
