@@ -9,21 +9,25 @@ Requisites
 ClickIt uses Ruby 2.2.0
 
 Installation
+======
 
 After cloning the repository on your local machine, cd to the project root directory and install all the dependencies by typing
+
 ------------
-   bundle install
+    bundle install
 
 To run all the specs type
+
 ------------
-   rake
+    rake
  
 **Example Usage:**
 By default the application uses the url http://www.google.co.uk
 
 ------------
-rake which_university
+    rake which_university
 
 If you wish to use a different url, use the following
-------------
-rake which_university[http://otherurl.com]
+
+-------
+    rake which_university[http://otherurl.com]
